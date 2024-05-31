@@ -18,21 +18,43 @@ body {
   color: var(--navy-blue);
   line-height: 24px;
   letter-spacing: 0.32px;
+  margin: 0;
+  max-width: 1440px;
+}
+
+
+header {
+  border-bottom: 1px solid var(--cornflower);
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 a {
   text-decoration: none;
 }
 ul {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 h1,
 h2,
 h3 {
+  margin-top: 0;
+  margin-bottom: 0;
   line-height: 40px;
   letter-spacing: 0.72px;
 }
-
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 /* Logo */
+.basic-containers {
+  display: inline-block;
+}
 .logo-web-upper {
   color: var(--iris);
   font-family: Raleway;
@@ -50,14 +72,22 @@ h3 {
   letter-spacing: 0.54px;
   text-transform: uppercase;
 }
+/* navigation */
 .navigation-item {
+  display: inline;
+}
+.navigation-link {
   font-weight: 500;
   color: var(--navy-blue);
 }
-.navigation-item:focus,
-.navigation-item:hover {
+.navigation-link:focus,
+.navigation-link:hover {
   color: var(--ocean);
 }
+/* .line:active {
+  border-bottom: 5px solid var(--ocean);
+  border-radius: 50%;
+} */
 /* Address */
 .contacts {
   color: var(--slate);
@@ -98,12 +128,15 @@ h3 {
   background: var(--ocean);
 }
 /* Feature */
-.item-heading {
+.feature-list {
+  display: inline-block;
+}
+.feature-item-heading {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
-.item-text {
+.feature-item-text {
   width: 264px;
 }
 /* Team */
@@ -111,13 +144,21 @@ h3 {
   background: var(--cloud);
 }
 .team-heading {
+  text-align: center;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.72px;
 }
-.team-list {
+.team-card {
+  display: inline-block;
+  border-radius: 0px 0px 4px 4px;
+  background: var(--WHITE, #fff);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
+
 .team-name {
   font-size: 20px;
   font-weight: 500;
@@ -132,6 +173,10 @@ h3 {
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.72px;
+  text-align: center;
+}
+.portfolio-list {
+  display: inline-block;
 }
 .portfolio-service {
   color: var(--navy-blue);
@@ -144,7 +189,7 @@ h3 {
   color: var(--slate);
 }
 /* Footer */
-footer {
+.page-footer {
   background: var(--navy-blue);
 }
 .logo-web-lower {
