@@ -18,7 +18,6 @@ body {
   color: var(--navy-blue);
   line-height: 24px;
   letter-spacing: 0.32px;
-  width: 1440px;
 }
 
 header {
@@ -39,21 +38,18 @@ ul {
 }
 h1,
 h2,
-h3 {
+h3,
+p {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
   letter-spacing: 0.72px;
 }
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+
 /* container */
 .container {
-  width: 1440px;
-  padding-left: 156px;
-  padding-right: 156px;
+  width: 1158px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 /* Logo */
@@ -119,11 +115,9 @@ p {
 .banner-section {
   background: var(--navy-blue);
   height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
+.banner-container {
+}
 .banner-heading {
   color: var(--white);
   font-size: 56px;
