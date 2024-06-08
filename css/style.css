@@ -18,10 +18,8 @@ body {
   color: var(--navy-blue);
   line-height: 24px;
   letter-spacing: 0.32px;
-  margin: 0;
-  max-width: 1440px;
+  width: 1440px;
 }
-
 
 header {
   border-bottom: 1px solid var(--cornflower);
@@ -51,9 +49,20 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+/* container */
+.container {
+  width: 1440px;
+  padding-left: 156px;
+  padding-right: 156px;
+  margin: 0 auto;
+}
 /* Logo */
+.head-section {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 .basic-containers {
-  display: inline-block;
+  display: flex;
 }
 .logo-web-upper {
   color: var(--iris);
@@ -65,6 +74,7 @@ p {
   text-transform: uppercase;
 }
 .logo-studio-upper {
+  color: var(--navy-blue);
   font-family: Raleway;
   font-size: 18px;
   font-weight: 700;
@@ -73,8 +83,12 @@ p {
   text-transform: uppercase;
 }
 /* navigation */
+.navigation-list {
+  margin-left: 76px;
+}
 .navigation-item {
-  display: inline;
+  display: inline-block;
+  padding-right: 40px;
 }
 .navigation-link {
   font-weight: 500;
@@ -90,23 +104,33 @@ p {
 } */
 /* Address */
 .contacts {
+  margin-left: 332px;
+}
+.contacts-item {
   color: var(--slate);
   font-style: normal;
+  padding-right: 40px;
 }
-.contacts:focus,
-.contacts:hover {
+.contacts-item:focus,
+.contacts-item:hover {
   color: var(--ocean);
 }
 /* Banner */
 .banner-section {
   background: var(--navy-blue);
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .banner-heading {
   color: var(--white);
   font-size: 56px;
   font-weight: 700;
   line-height: 60px;
   letter-spacing: 1.12px;
+  width: 496px;
 }
 .banner-button {
   cursor: pointer;
@@ -119,17 +143,23 @@ p {
   background: var(--iris);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: none;
-  display: inline-flex;
   padding: 16px 32px;
-  align-items: flex-start;
   gap: 10px;
+  margin-left: 154px;
+  margin-top: 48px;
 }
 .banner-button:hover {
   background: var(--ocean);
 }
 /* Feature */
-.feature-list {
+.feature-section {
+  margin-top: 120px;
+}
+.feature-item {
   display: inline-block;
+}
+.feature-item:not(:first-child) {
+  padding-left: 24px;
 }
 .feature-item-heading {
   font-size: 20px;
@@ -142,56 +172,91 @@ p {
 /* Team */
 .team-section {
   background: var(--cloud);
+  margin-top: 240px;
 }
 .team-heading {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.72px;
+  margin-bottom: 72px;
 }
 .team-card {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 0px 0px 4px 4px;
   background: var(--WHITE, #fff);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  margin-right: 24px;
 }
 
 .team-name {
+  padding-top: 32px;
+  padding-bottom: 8px;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
 .team-profession {
   color: var(--slate);
+  padding-bottom: 32px;
 }
 /* Portfolio */
+.portfolio-section {
+  margin-top: 240px;
+}
 .portfolio-heading {
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.72px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
 }
 .portfolio-list {
-  display: inline-block;
+  display: inline-flex;
+  flex-basis: 360px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin-right: 24px;
+  margin-bottom: 48px;
+  border-right: 1px solid var(--cornflower);
+  border-bottom: 1px solid var(--cornflower);
+  border-left: 1px solid var(--cornflower);
 }
 .portfolio-service {
   color: var(--navy-blue);
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.4px;
+  padding-left: 16px;
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 
 .potfolio-app {
   color: var(--slate);
+  padding-left: 16px;
+  margin-bottom: 32px;
 }
 /* Footer */
 .page-footer {
+  height: 312px;
   background: var(--navy-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .logo-web-lower {
   color: var(--iris);
   font-family: Raleway;
@@ -200,6 +265,7 @@ p {
   line-height: 21px;
   letter-spacing: 0.54px;
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .logo-studio-lower {
